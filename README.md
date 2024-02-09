@@ -1,6 +1,6 @@
-# bitburner
-<body> 
-  My [BitBurner](https://bitburner-official.github.io/) scripts. You can use them I guess, they're not very good.<br>
+# Bitburner
+
+  My [Bitburner](https://bitburner-official.github.io) scripts. You can use them I guess, they're not very good.<br>
   I kinda want to just make a Manager script for all of the main mechanics later tbh. <br>
   The reason they're not very good is; <br><br>
     <details> 
@@ -10,4 +10,3 @@
     </details>
   <br>3. I'm not very good at coding tbh :/
   <br><br> Lots of these scripts require APIs gotten from certain Source-Files, so check if you have them before trying to run them, and if you don't, don't get angry at me.
-</body> 
