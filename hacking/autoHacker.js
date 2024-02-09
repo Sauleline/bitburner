@@ -9,7 +9,7 @@ export async function main(ns) {
 	let targetServer = ns.args[0]
 	let showInfo = ns.args[1]
 	//Needs to be "true" or "false"
-  //(Automatically false if ran through the deployer)
+  //(Automatically false if ran through the deployer, without giving an argument)
 
 	let hackedfor = 0
 	while (true) {
