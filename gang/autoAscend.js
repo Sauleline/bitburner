@@ -1,5 +1,6 @@
 
 //Thing that automatically ascends gang members once their strength multiplier after ascending hits 1.5
+//also displays all of the current hypothetical ascention results in a table
 
 /** @param {NS} ns */
 function expo(x, f) {
@@ -30,8 +31,9 @@ export async function main(ns) {
 	ns.setTitle("Hypothetical Ascention Results")
 
 	while (true) {
-		ns.print("| member name |  hac  |  str  |  def  |  dex  |  agi  |  cha  |")
-		ns.print("|_____________|_______|_______|_______|_______|_______|_______|")
+		ns.print("┌─────────────┬───────┬───────┬───────┬───────┬───────┬───────┐")
+		ns.print("│ member name │  hac  │  str  │  def  │  dex  │  agi  │  cha  │")
+		ns.print("├─────────────┼───────┼───────┼───────┼───────┼───────┼───────┤")
 		for (let i = 0; i < members.length; i++) {
 			results = ns.gang.getAscensionResult(members[i])
 
@@ -60,11 +62,8 @@ export async function main(ns) {
 				if (hac.length == 1) {
 					hac = (" ×" + hac + "  ")
 				}
-				else if (str.length == 2) {
-					hac = (" ×" + hac + " ")
-				}
-				else if (str.length == 3) {
-					hac = ("×" + hac + " ")
+				else if (hac.length == 3) {
+					hac = (" ×" + hac)
 				}
 				else{
 					hac = ("×" + hac)
@@ -73,11 +72,8 @@ export async function main(ns) {
 				if (str.length == 1) {
 					str = (" ×" + str + "  ")
 				}
-				else if (str.length == 2) {
-					str = (" ×" + str + " ")
-				}
 				else if (str.length == 3) {
-					str = ("×" + str + " ")
+					str = (" ×" + str)
 				}
 				else{
 					str = ("×" + str)
@@ -86,11 +82,8 @@ export async function main(ns) {
 				if (def.length == 1) {
 					def = (" ×" + def + "  ")
 				}
-				else if (def.length == 2) {
-					def = (" ×" + def + " ")
-				}
 				else if (def.length == 3) {
-					def = ("×" + def + " ")
+					def = (" ×" + def)
 				}
 				else{
 					def = ("×" + def)
@@ -99,11 +92,8 @@ export async function main(ns) {
 				if (dex.length == 1) {
 					dex = (" ×" + dex + "  ")
 				}
-				else if (str.length == 2) {
-					dex = (" ×" + dex + " ")
-				}
-				else if (str.length == 3) {
-					dex = ("×" + dex + " ")
+				else if (dex.length == 3) {
+					dex = (" ×" + dex)
 				}
 				else{
 					dex = ("×" + dex)
@@ -112,11 +102,8 @@ export async function main(ns) {
 				if (agi.length == 1) {
 					agi = (" ×" + agi + "  ")
 				}
-				else if (agi.length == 2) {
-					agi = (" ×" + agi + " ")
-				}
 				else if (agi.length == 3) {
-					agi = ("×" + agi + " ")
+					agi = (" ×" + agi)
 				}
 				else{
 					agi = ("×" + agi)
@@ -125,19 +112,17 @@ export async function main(ns) {
 				if (cha.length == 1) {
 					cha = (" ×" + cha + "  ")
 				}
-				else if (cha.length == 2) {
-					cha = (" ×" + cha + " ")
-				}
 				else if (cha.length == 3) {
-					cha = ("×" + cha + " ")
+					cha = (" ×" + cha)
 				}
 				else{
 					cha = ("×" + cha)
 				}
 
-				ns.print("| " + members[i] + " | " + hac + " | " + str + " | " + def + " | " + dex + " | " + agi + " | " + cha + " | ")
+				ns.print("│ " + members[i] + " │ " + hac + " │ " + str + " │ " + def + " │ " + dex + " │ " + agi + " │ " + cha + " │")
 			}
 		}
+		ns.print("└─────────────┴───────┴───────┴───────┴───────┴───────┴───────┘")
 		await ns.sleep(tick)
 		ns.clearLog()
 	}
