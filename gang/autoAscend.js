@@ -2,6 +2,8 @@
 //Thing that automatically ascends gang members once their strength multiplier after ascending hits 1.5
 //also displays all of the current hypothetical ascention results in a table
 
+//Gang member names are expected to all be 12 characters long (my rename.js script with a 10 character name works for this)
+
 /** @param {NS} ns */
 function expo(x, f) {
 	return Number.parseFloat(x).toExponential(f);
