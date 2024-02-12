@@ -31,7 +31,7 @@ export async function main(ns) {
 
 	while (true) {
 		ns.print("| member name |  hac  |  str  |  def  |  dex  |  agi  |  cha  |")
-		ns.print("+-------------+-------+-------+-------+-------+-------+-------+")
+		ns.print("|_____________|_______|_______|_______|_______|_______|_______|")
 		for (let i = 0; i < members.length; i++) {
 			results = ns.gang.getAscensionResult(members[i])
 
