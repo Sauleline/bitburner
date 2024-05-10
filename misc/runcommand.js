@@ -1,4 +1,7 @@
 /** @param {NS} ns */
+
+//Thanks to alainbryden for the idea.
+
 export async function main(ns) {
 	let func = ns.args
 	let tempFile = "temp.js"
