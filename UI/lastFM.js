@@ -2,6 +2,7 @@
 //just a little script i made to show me what song im listening to at the moment. there are simple instructions for how to get a lastfm api key online, use them.
 export async function main(ns) {
 	ns.tail()
+	ns.disableLog("ALL")
 	let username = "YOUR LASTFM USERNAME"
 	let apiKey = "YOUR API KEY"
 	while (true) {
@@ -21,5 +22,7 @@ export async function main(ns) {
 		else{
 			ns.print("\u001b[38;2;187;187;187m<3")
 		}
+		await ns.sleep(1500)
+		//Rate Limit protection
 	}
 }
