@@ -1,5 +1,8 @@
 /** @param {NS} ns */
 //just a little script i made to show me what song im listening to at the moment. there are simple instructions for how to get a lastfm api key online, use them.
+
+//added a function to automatically write last fm api funcitons
+
 export async function main(ns) {
 	function lfm(func, key, ...params) {
 		let out = "https://ws.audioscrobbler.com/2.0/?method=" + func + "&api_key=" + key
